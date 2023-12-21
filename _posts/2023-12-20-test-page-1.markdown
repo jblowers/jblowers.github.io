@@ -1,5 +1,5 @@
 ---
-title: "Test Page 1"
+title: "Setting up Jekyll for blog posting functionality"
 layout: post
 ---
 
