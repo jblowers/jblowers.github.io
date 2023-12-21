@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-20T23:13:28-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2023/12/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-12-20T22:22:57-08:00</published><updated>2023-12-20T22:22:57-08:00</updated><id>http://localhost:4000/jekyll/update/2023/12/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/12/20/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Test Page 1</title><link href="http://localhost:4000/2023/12/20/test-page-1.html" rel="alternate" type="text/html" title="Test Page 1" /><published>2023-12-20T00:00:00-08:00</published><updated>2023-12-20T00:00:00-08:00</updated><id>http://localhost:4000/2023/12/20/test-page-1</id><content type="html" xml:base="http://localhost:4000/2023/12/20/test-page-1.html"><![CDATA[<h2 id="12202023">12/20/2023</h2>
+
+<p>Steps to set up my Jekyll install! lol</p>
+
+<p>Had to take a bunch of hacks to get it to run from WSL on Windows (might have been something I did wrong — never installed or used Ruby/gem or any of the bundler stuff).</p>
+
+<h3 id="these-are-my-steps">These are my steps:</h3>
+
+<h4 id="a-bunch-of-install-steps">A bunch of install steps:</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get install ruby-full build-essential zlib1g-dev
+sudo apt-get install rbenv ruby-build
+# These might not have been necessary
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc
+echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+# End of potentially unnecessary
+gem install bundler
+</code></pre></div></div>
+
+<p>I actually had to use sudo with all the gem and bundle calls – it warned me this was a bad idea, but I couldn’t get it to go without it.<br />
+Likely a consequence of this, I also had to manually install (with sudo) a number of dependencies in order for 
+<code class="language-plaintext highlighter-rouge">bundle install</code>
+to run correctly.</p>
+
+<ul>
+  <li>Once that was all set up though, I could create the blog files within my repo by using
+<code class="language-plaintext highlighter-rouge">jekyll new rusty-quest-blog</code></li>
+  <li>moved into that directory and <code class="language-plaintext highlighter-rouge">bundle install</code></li>
+  <li>Then to add a page!<br />
+I fought with it a bit, but then realized I need to name the file correctly under _posts
+Needs to match this format: <code class="language-plaintext highlighter-rouge">2023-12-20-test-page-1.markdown</code></li>
+</ul>
+
+<h2 id="a-couple-other-things-i-had-to-do-today">A couple other things I had to do today</h2>
+<p>I needed to set up ssh for git (rather than mess with passwords and such)</p>
+
+<ul>
+  <li>for this, I followed these steps</li>
+  <li><code class="language-plaintext highlighter-rouge">eval "$(ssh-agent -s)"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ssh-add ~/.ssh/id_rsa</code></li>
+  <li>Add the public key to my github account</li>
+  <li>Then I had to change the remote url for my already existing git repo:</li>
+  <li><code class="language-plaintext highlighter-rouge">git remote set-url origin git@github.com:jblowers/rusty_quest.git</code></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[12/20/2023]]></summary></entry></feed>
